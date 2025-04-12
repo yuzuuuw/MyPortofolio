@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #fff, #fcd9b8);
+    color: #333;
+  }
+  
+  .container {
+    padding: 50px;
+    max-width: 1000px;
+    margin: auto;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 3em;
+    color: #5c3900;
+    text-shadow: 2px 2px 4px rgba(92, 57, 0, 0.2);
+    margin-bottom: 50px;
+    animation: slideDown 0.8s ease forwards;
+  }
+  
+  .project {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .project-item {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.5s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .project-description {
+    padding: 20px;
+  }
+  
+  .project-description h2 {
+    color: #bf7e00;
+    margin-bottom: 10px;
+  }
+  
+  .project-description p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+
+  .back-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 16px;
+    background-color: #5c3900;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #8c5b26;
+  }
+  
+  /* Responsive Layout */
+  @media (min-width: 768px) {
+    .project-item {
+      flex-direction: row;
+    }
+  
+    .project-image,
+    .project-description {
+      flex: 1;
+    }
+  
+    .project-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
